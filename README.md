@@ -85,7 +85,7 @@ The app is deployed using [**Streamlit Cloud**](https://streamlit.io/cloud):
   - `CLOUDINARY_API_SECRET`
 - Set the `main` file as `streamlit_app.py` or your entry file.
 
-Access App at YOUR LINK
+Access App at https://studysyncapp.streamlit.app
 ---
 
 ## 📌 To Do
