@@ -247,7 +247,7 @@ else:
             st.write(f"🕐 {slot} — {count} vote(s)")
 
         def send_confirmation_email(session, final_slot):
-            sg = sendgrid.SendGridAPIClient(api_key=os.environ["SENDGRID_API_KEY"])
+            sg = sendgrid.SendGridAPIClient(api_key=st.secrets["SENDGRID_API_KEY"])
 
             for email in session["participants"]:
                 message = Mail(
@@ -353,9 +353,9 @@ else:
 
         load_dotenv()
 
-        CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
-        CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
-        REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI")
+        CLIENT_ID = st.secrets["GOOGLE_CLIENT_ID"]
+        CLIENT_SECRET = st.secrets["GOOGLE_CLIENT_SECRET"]
+        REDIRECT_URI = st.secrets["GOOGLE_REDIRECT_URI"]
 
         SCOPES = ["https://www.googleapis.com/auth/calendar"]
 
