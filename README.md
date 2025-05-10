@@ -1,0 +1,2 @@
+# StudySyncApp
+MisogiAI
