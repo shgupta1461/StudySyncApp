@@ -7,7 +7,7 @@ from datetime import datetime
 from collections import Counter
 
 load_dotenv()
-client = MongoClient(os.getenv("MONGO_URI"))
+client = MongoClient(st.secrets["MONGO_URI"])
 db = client["studysync"]
 sessions_collection = db["sessions"]
 users = db["users"]
